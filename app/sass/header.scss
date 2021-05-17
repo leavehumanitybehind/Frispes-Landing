@@ -1,0 +1,115 @@
+.header {
+    @include flex-between;
+    padding-top: 61px;
+    padding-bottom: 56px;
+    flex-wrap: wrap;
+
+    @media (min-width: $desktop-screen) {
+        flex-wrap: nowrap;
+    }
+}
+
+nav {
+    display: none;
+    @media (min-width: $desktop-screen) {
+        display: flex;
+    }
+}
+
+.nav__list {
+    @include no-list;
+    @media (min-width: $desktop-screen) {
+        display: flex;
+
+        &-item:not(:last-child) {
+            margin-right: 40px;
+        }
+    }
+
+    & a {
+        font-weight: bold;
+    }
+}
+
+.nav__list-item:hover a {
+    color: $second-color;
+}
+
+.nav-show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100%;
+    padding-top: 20px;
+}
+
+.nav-show .nav__list-item {
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.header__user-menu {
+    display: none;
+
+    @media (min-width: $tablet-screen) {
+    }
+
+    @media (min-width: $desktop-screen) {
+        display: flex;
+    }
+}
+
+.header__user-menu-show {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 100%;
+    padding-top: 20px;
+}
+
+.header__btn {
+    width: 30px;
+    height: 20px;
+    background-color: inherit;
+    cursor: pointer;
+    border: none;
+    background-image: url("../img/menu.svg");
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    @media (min-width: $desktop-screen) {
+        display: none;
+    }
+
+    &--close {
+        background-image: url("../img/menu-close.svg");
+        background-repeat: no-repeat;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.user-menu__btn {
+    font-family: "Lora", serif;
+    font-style: normal;
+    font-weight: bold;
+    color: $second-color;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+
+    @include no-btn;
+    padding: 12px 24px;
+    background-color: inherit;
+
+    &--active {
+        background-color: $second-color;
+        color: $white;
+        box-shadow: 0px 4px 16px rgba(255, 87, 34, 0.32);
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

@@ -1,0 +1,161 @@
+@import "mixins.scss";
+@import "variables.scss";
+@import "fonts.scss";
+@import "header.scss";
+@import "introducing.scss";
+@import "space.scss";
+@import "adventages.scss";
+@import "facilities.scss";
+@import "gallery.scss";
+@import "partners.scss";
+@import "reviews.scss";
+@import "help.scss";
+@import "news.scss";
+@import "member.scss";
+@import "footer.scss";
+
+body {
+    font-family: "Lora", serif;
+    font-size: 20px;
+    margin: 0 auto;
+
+    @media (min-width: $desktop-screen) {
+        max-width: 1440px;
+    }
+}
+
+a {
+    font-family: "Lato", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.container {
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    @media (min-width: $desktop-screen) {
+        max-width: 1440px;
+        padding-right: 165px;
+        padding-left: 165px;
+    }
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.mySwiper .swiper-slide,
+.mySwiper2 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.mySwiper .swiper-slide img {
+    @media (min-width: $desktop-screen) {
+        display: block;
+        width: 100%;
+    }
+}
+
+.mySwiper2 .swiper-slide img {
+    height: 350px;
+    width: 350px;
+}
+
+.mySwiper2 .swiper-slide-active {
+    @media (min-width: $desktop-screen) {
+        top: -228px;
+        margin: 0 50px;
+    }
+
+    & img {
+        @media (min-width: $desktop-screen) {
+            height: 580px;
+            transition: all 0.8s;
+        }
+    }
+}
+
+.btn-n {
+    @include no-btn;
+    background: url("../img/right-arrow.svg") no-repeat center center;
+    width: 91px;
+    height: 61px;
+    cursor: pointer;
+}
+
+.btn-b {
+    @include no-btn;
+    background: url("../img/back-arrow.svg") no-repeat center center;
+    width: 52px;
+    height: 61px;
+    margin-right: 23px;
+    cursor: pointer;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0;
+}
+
+.swiper-pagination-bullet {
+    width: 52px;
+    height: 50px;
+    text-align: center;
+    font-size: 12px;
+    opacity: 1;
+    height: 50px;
+    border-top: 4px solid rgba(0, 0, 0, 0.2);
+    background: white;
+    border-radius: 0;
+}
+
+.swiper-pagination-bullet-active {
+    border-top: 4px solid $second-color;
+}
+
+.mySwiper {
+    & .swiper-pagination-bullet {
+        color: white;
+    }
+
+    & .swiper-pagination-bullet-active {
+        color: black;
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+.pagination-btns {
+    display: flex;
+    justify-content: center;
+}

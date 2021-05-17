@@ -1,0 +1,108 @@
+.facilities {
+    padding-bottom: 42px;
+    @media (min-width: $desktop-screen) {
+        padding-bottom: 112px;
+    }
+
+    & .h6-text::after {
+        left: 11%;
+    }
+}
+.facilities__wrapper {
+    @media (min-width: $desktop-screen) {
+        @include flex-between;
+    }
+}
+
+.facilities__list-wrapper {
+    @media (min-width: $desktop-screen) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.facilities__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include no-list;
+    @media (min-width: $desktop-screen) {
+        display: block;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: #222831;
+        margin-right: 48px;
+    }
+
+    & .facilities__list-item {
+        font-size: 12px;
+        padding: 14px;
+        cursor: pointer;
+        @media (min-width: $desktop-screen) {
+            padding: 24px;
+            font-size: 20px;
+        }
+
+        &--active {
+            background-color: $second-color;
+            color: $white;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+    }
+}
+
+.facilities__progress-list {
+    font-size: 16px;
+    margin-bottom: 30px;
+    @media (min-width: $desktop-screen) {
+        transform: rotate(-90deg);
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    min-width: 50px;
+}
+.progress__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: $desktop-screen) {
+        flex-direction: column;
+        align-items: center;
+        min-width: 40px;
+    }
+}
+.progress__list {
+    @include no-list;
+    margin-bottom: 30px;
+    display: flex;
+    @media (min-width: $desktop-screen) {
+        display: block;
+    }
+    & .li {
+        width: 30px;
+        height: 4px;
+        text-align: center;
+        font-size: 12px;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 0;
+        @media (min-width: $desktop-screen) {
+            transform: translate(-180deg);
+            width: 4px;
+            height: 30px;
+        }
+
+        &--active {
+            background: $second-color;
+        }
+    }
+}
+
+.imgContainer {
+    width: 100%;
+    @media (min-width: $desktop-screen) {
+        width: 750px;
+    }
+}

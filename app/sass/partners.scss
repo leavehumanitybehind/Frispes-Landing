@@ -1,0 +1,11 @@
+.partners {
+    padding-top: 42px;
+    text-align: center;
+    @media (min-width: $desktop-screen) {
+        padding-top: 112px;
+    }
+}
+
+.partners img {
+    width: 100%;
+}

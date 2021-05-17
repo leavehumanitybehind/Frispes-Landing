@@ -1,0 +1,132 @@
+.introducing {
+    margin: 0 0 40px auto;
+
+    @media (min-width: $desktop-screen) {
+        margin: 0 0 112px auto;
+    }
+
+    & .h6-text::after {
+        left: 20%;
+    }
+}
+
+.text-wrapper {
+    @media (min-width: $desktop-screen) {
+        @include flex-between;
+        align-items: flex-start;
+    }
+}
+
+.text-wrapper__title {
+    @include no-default-indent;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    
+    color: $main-color;
+    text-align: center;
+
+    @media (min-width: $tablet-screen) {
+      font-size: 42px;
+    line-height: 57px;  
+    }
+
+    & span {
+        color: $second-color;
+    }
+
+    @media (min-width: $desktop-screen) {
+        margin-right: 61px;
+        font-size: 52px;
+        line-height: 67px;
+        text-align: initial;
+    }
+}
+
+.text-wrapper__description {
+    color: $grey-text-color;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+
+    @media (min-width: $desktop-screen) {
+        font-size: 20px;
+        line-height: 30px;
+        max-width: 380px;
+        text-align: initial;
+    }
+}
+
+.form-wrapper {
+    @media (min-width: $desktop-screen) {
+        background: url("../img/main-bg.png") no-repeat;
+        background-position: right top;
+        min-height: 626px;
+        padding-top: 40px;
+    }
+}
+
+.form {
+    background-color: $main-color;
+    display: flex;
+    flex-direction: column;
+    color: $white;
+    max-width: 445px;
+    margin: 0 auto;
+    padding: 40px;
+    @media (min-width: $desktop-screen) {
+        max-width: 445px;
+        margin-left: 165px;
+    }
+}
+
+.select__wrapper {
+    background-color: $dark-main-color;
+    padding: 26px 16px 8px;
+    position: relative;
+    margin-bottom: 17px;
+
+    & p {
+        @include no-default-indent;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        color: $white;
+        position: absolute;
+        top: 0;
+
+        opacity: 0.35;
+    }
+
+    & select {
+        background-color: inherit;
+        width: 100%;
+        border: none;
+        outline: none;
+        font-family: "Lora", serif;
+        color: $white;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    & option {
+        background-color: inherit;
+        font-family: "Lora", serif;
+        color: white;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+.form-btn {
+    @include no-btn;
+    background-color: $second-color;
+    padding: 12px;
+    color: white;
+    font-size: 18px;
+    line-height: 28px;
+    text-transform: uppercase;
+}

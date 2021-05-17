@@ -1,0 +1,42 @@
+.h2-text {
+    color: $main-color;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+
+    @media (min-width: $desktop-screen) {
+        font-size: 40px;
+        line-height: 51px;
+    }
+
+    &--white {
+        color: $white;
+    }
+}
+
+.h6-text {
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+
+    color: $text-color;
+    position: relative;
+    padding-right: 15px;
+
+    @media (min-width: $desktop-screen) {
+        font-size: 20px;
+        line-height: 30px;
+    }
+   @media (min-width: $desktop-screen) {
+    &::after {
+        content: "";
+        color: $text-color;
+        position: absolute;
+        width: 73px;
+        height: 1px;
+        top: 55%;
+        border-top: 1px solid $text-color;
+    }
+}
+}
