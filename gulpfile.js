@@ -62,11 +62,12 @@ function styles() {
 }
 
 function images() {
-    return src('app/img/**/*') // Берём все изображения из папки источника
-        .pipe(newer('app/img/dest/')) // Проверяем, было ли изменено (сжато) изображение ранее
-        .pipe(imagemin()) // Сжимаем и оптимизируем изображеня
-        .pipe(dest('app/img/dest/')) // Выгружаем оптимизированные изображения в папку назначения
+    return src(['img-full/**/*.jpg', 'img-full/**/*.png', 'img-full/**/*.svg'])
+        .pipe(imagemin())
+        .pipe(dest('dist/img'))
 }
+
+
 
 function cleanimg() {
     return del('app/img/dest/**/*', { force: true }) // Удаляем всё содержимое папки "app/images/dest/"
