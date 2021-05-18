@@ -62,10 +62,14 @@ function styles() {
 }
 
 function images() {
-    return src('/img/**/*') // Берём все изображения из папки источника
-        .pipe(imagemin()) // Сжимаем и оптимизируем изображеня
-        .pipe(dest('dist/img/')) // Выгружаем оптимизированные изображения в папку назначения
-}
+    return src("app/img/**/*.{png,jpg,svg}")
+        .pipe(imagemin([
+            imagemin.optipng({ optimizationLevel: 3 }),
+            imagemin.jpegtran({ progressive: true }),
+            imagemin.svgo()
+        ]))
+        .pipe(dest("app/img"));
+    }
 
 function cleanimg() {
     return del('app/img/dest/**/*', { force: true }) // Удаляем всё содержимое папки "app/images/dest/"
@@ -75,8 +79,10 @@ function buildcopy() {
     return src([ // Выбираем нужные файлы
         'app/css/**/*.min.css',
         'app/js/**/*.min.js',
-        'app/img/dest/**/*',
+        'app/img/**',
         'app/**/*.html',
+        "app/fonts/**/*.{woff,woff2}",
+        "app//*.ico"
     ], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
         .pipe(dest('dist')) // Выгружаем в папку с финальной сборкой
 }
