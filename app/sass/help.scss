@@ -31,10 +31,15 @@
         background-repeat: no-repeat;
         background-image: url("../img/orange-btn.svg");
 
-        @media (min-width: $desktop-screen) {
+        @media (min-width: $tablet-screen) {
             bottom: -10%;
-            left: 42%;
+            left: 44%;
         }
+
+         @media (min-width: $desktop-screen) {
+             left: 42%;
+         }
+
     }
 
     @media (min-width: $desktop-screen) {

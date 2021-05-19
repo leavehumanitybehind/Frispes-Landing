@@ -1,6 +1,10 @@
 .review {
     padding: 42px 24px 20px;
 
+     @media (min-width: $tablet-screen) {
+       padding: 42px 48px 20px;
+    }
+
     @media (min-width: $desktop-screen) {
         padding: 112px 0 0 0;
     }
@@ -36,6 +40,10 @@
 .personal-review {
     display: flex;
     align-items: center;
+    font-size: 14px;
+          @media (min-width: $desktop-screen) {
+              font-size: 20px;
+          }
 
     & img {
         margin-right: 16px;

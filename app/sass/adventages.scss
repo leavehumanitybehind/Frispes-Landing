@@ -17,7 +17,7 @@
     text-align: center;
     margin-bottom: 20px;
     grid-gap: 10px;
-    
+
     @media (min-width: $desktop-screen) {
         text-align: initial;
         margin-bottom: 0;
@@ -28,9 +28,9 @@
     & p {
         @include no-default-indent;
         color: $grey-text-color;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 24px;
-        @media (min-width: $desktop-screen) {
+        @media (min-width: $tablet-screen) {
             font-size: 16px;
             line-height: 26px;
         }
@@ -40,14 +40,14 @@
 .adventages__list-item-h5 {
     @include no-default-indent;
     position: relative;
-    padding-left: 23px;
+    padding-left: 35px;
 
     color: $main-color;
-    font-size: 21px;
-    line-height: 33px;
+    font-size: 16px;
+    line-height: 28px;
     margin-bottom: 8px;
 
-    @media (min-width: $desktop-screen) {
+    @media (min-width: $tablet-screen) {
         font-size: 32px;
         line-height: 41px;
         padding-left: 50px;

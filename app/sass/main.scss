@@ -90,7 +90,17 @@ a {
 .mySwiper2 .swiper-slide img {
     height: 350px;
     width: 350px;
+    @media (min-width: $tablet-screen) {
+        width: 70%;
+        height: 70%;
+    }
+    @media (min-width: $desktop-screen) {
+          height: 350px;
+    width: 350px;
+    }
+
 }
+
 
 .mySwiper2 .swiper-slide-active {
     @media (min-width: $desktop-screen) {
